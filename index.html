@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fincafé</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Encabezado con fondo café y logo -->
+  <header>
+    <img src="logo.png" alt="Logo Fincafé" class="logo">
+  </header>
+
+  <!-- Título -->
+  <h1>Síguenos</h1>
+
+  <!-- Botones de redes -->
+  <div class="botones">
+    <a href="https://www.instagram.com/fincafenavojoa/" target="_blank" class="btn">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61566631057362&sk=about" target="_blank" class="btn">Facebook</a>
+  </div>
+
+  <!-- Botón del menú -->
+  <div class="boton-menu">
+    <button id="menuBtn" class="btn">Nuestro Menú</button>
+  </div>
+
+  <!-- Imagen emergente del menú -->
+  <div id="menuPopup" class="popup">
+    <span id="closePopup">&times;</span>
+    <img src="menufincafe.png" alt="Menú Fincafé" class="popup-img">
+  </div>
+
+  <script>
+    // Script para abrir y cerrar el menú
+    const menuBtn = document.getElementById('menuBtn');
+    const popup = document.getElementById('menuPopup');
+    const closePopup = document.getElementById('closePopup');
+
+    menuBtn.addEventListener('click', () => {
+      popup.style.display = 'flex';
+    });
+
+    closePopup.addEventListener('click', () => {
+      popup.style.display = 'none';
+    });
+
+    popup.addEventListener('click', (e) => {
+      if (e.target === popup) popup.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
