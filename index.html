@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Fincafé</title>
   <link rel="stylesheet" href="style.css" />
-  
-  <!-- Favicon (icono de la pestaña) -->
   <link rel="icon" type="image/png" href="logo.png">
 </head>
+
 <body>
-  <!-- Encabezado con fondo café y logo -->
+  <!-- Encabezado -->
   <header>
     <img src="logo.png" alt="Logo Fincafé" class="logo">
   </header>
@@ -28,37 +27,35 @@
   <div class="boton-menu">
     <button id="menuBtn" class="btn">Nuestro Menú</button>
   </div>
-  <!-- NUEVO PANEL DE TRANSFERENCIA -->
-<div class="panel-transferencia">
-  <h2>Datos de Transferencia</h2>
 
-  <div class="transfer-box">
-    <p><strong>Cuenta CLABE:</strong> 71518 02830 0069 0387</p>
-    <p><strong>Nombre:</strong> Luis Fernando Navarro Felix</p>
-    <p><strong>Banco:</strong> Cashi / Cuenta Cashi</p>
-
-  <!-- Imagen emergente del menú -->
+  <!-- Popup del menú -->
   <div id="menuPopup" class="popup">
     <span id="closePopup">&times;</span>
     <img src="menufincafe.png" alt="Menú Fincafé" class="popup-img">
   </div>
-    <!-- NUEVO PANEL DE TRANSFERENCIA -->
-<div class="panel-transferencia">
-  <h2>Datos de Transferencia</h2>
 
-  <div class="transfer-box">
-    <p><strong>Cuenta CLABE:</strong> 71518 02830 0069 0387</p>
-    <p><strong>Nombre:</strong> Luis Fernando Navarro Felix</p>
-    <p><strong>Banco:</strong> Cashi / Cuenta Cashi</p>
+  <!-- PANEL DE TRANSFERENCIA -->
+  <div class="panel-transferencia">
+    <h2>Datos de Transferencia</h2>
 
-    <button id="copyBtn" class="btn copiar">Copiar Datos</button>
-    <span id="copiado" class="copiado">✔ Copiado</span>
+    <div class="transfer-box">
+      <p><strong>Cuenta CLABE:</strong> 71518 02830 0069 0387</p>
+      <p><strong>Nombre:</strong> Luis Fernando Navarro Felix</p>
+      <p><strong>Banco:</strong> Cashi / Cuenta Cashi</p>
+
+      <button id="copyBtn" class="btn copiar">Copiar Datos</button>
+      <span id="copiado" class="copiado">✔ Copiado</span>
+    </div>
   </div>
-</div>
 
+  <!-- Footer -->
+  <footer>
+    <p>Made by: <strong>Luis Fernando Navarro</strong> | FINCAFE NAVOJOA | Navojoa, Sonora, México</p>
+  </footer>
 
+  <!-- Scripts -->
   <script>
-    // Script para abrir y cerrar el menú
+    // Abrir y cerrar popup del menú
     const menuBtn = document.getElementById('menuBtn');
     const popup = document.getElementById('menuPopup');
     const closePopup = document.getElementById('closePopup');
@@ -74,8 +71,23 @@
     popup.addEventListener('click', (e) => {
       if (e.target === popup) popup.style.display = 'none';
     });
+
+    // Copiar datos de transferencia
+    const copyBtn = document.getElementById("copyBtn");
+    const copiado = document.getElementById("copiado");
+
+    const datos = 
+`Cuenta CLABE: 71518 02830 0069 0387
+Nombre: Luis Fernando Navarro Felix
+Banco: Cashi / Cuenta Cashi`;
+
+    copyBtn.addEventListener("click", () => {
+      navigator.clipboard.writeText(datos).then(() => {
+        copiado.style.display = "block";
+        setTimeout(() => { copiado.style.display = "none"; }, 2000);
+      });
+    });
   </script>
+
 </body>
 </html>
-
-
