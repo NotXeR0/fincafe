@@ -1,20 +1,20 @@
-/* Estilos generales */
+/* General */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
-  background: #fff;
+  background: #ffffff;
   text-align: center;
 }
 
-/* Encabezado */
+/* Header */
 header {
   background-color: #997a50;
   padding: 30px 0;
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   object-fit: cover;
   background: white;
@@ -23,7 +23,7 @@ header {
 
 /* Título */
 h1 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   font-weight: 800;
   margin-top: 20px;
 }
@@ -34,33 +34,32 @@ h1 {
   justify-content: center;
   flex-wrap: wrap;
   gap: 15px;
-  margin: 30px 0;
+  margin: 25px 0;
 }
 
 .btn {
   background-color: #e2e2e2;
-  color: black;
-  text-decoration: none;
+  padding: 15px 35px;
+  border-radius: 12px;
   border: none;
-  padding: 15px 40px;
-  font-size: 1.1rem;
-  border-radius: 10px;
-  transition: transform 0.2s, background 0.2s;
   cursor: pointer;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: black;
+  transition: 0.25s ease;
 }
 
 .btn:hover {
-  background-color: #d4d4d4;
-  transform: scale(1.05);
+  transform: scale(1.06);
+  background-color: #d5d5d5;
 }
 
-/* Botón del menú */
+/* Botón menú */
 .boton-menu {
-  display: flex;
-  justify-content: center;
+  margin-bottom: 25px;
 }
 
-/* Popup */
+/* Popup menú */
 .popup {
   display: none;
   position: fixed;
@@ -77,23 +76,75 @@ h1 {
 .popup-img {
   max-width: 90%;
   max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px black;
+  border-radius: 12px;
 }
 
 #closePopup {
   position: absolute;
-  top: 30px;
-  right: 40px;
-  font-size: 40px;
+  top: 25px;
+  right: 35px;
+  font-size: 45px;
   color: white;
   cursor: pointer;
 }
 
-/* Adaptable a celular */
+/* PANEL TRANSFERENCIA */
+.panel-transferencia {
+  margin-top: 40px;
+  animation: fadeIn 0.7s ease;
+}
+
+.panel-transferencia h2 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+.transfer-box {
+  background-color: #e2e2e2;
+  width: 85%;
+  margin: auto;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
+  animation: slideUp 0.7s ease;
+}
+
+.transfer-box p {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.copiado {
+  display: none;
+  margin-top: 12px;
+  font-size: 1rem;
+  color: green;
+  font-weight: bold;
+}
+
+/* Footer */
+footer {
+  background-color: #997a50;
+  color: white;
+  padding: 15px 10px;
+  margin-top: 50px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive */
 @media (max-width: 600px) {
   .btn {
     width: 80%;
-    padding: 15px;
   }
 }
