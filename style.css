@@ -29,7 +29,7 @@ body {
   font-weight: 700;
 }
 
-/* BOTONES */
+/* BOTONES PEQUEÑOS (Instagram, Facebook) */
 .btn-container {
   margin-top: 20px;
   display: flex;
@@ -47,7 +47,7 @@ body {
   font-weight: 600;
 }
 
-/* Botones grandes */
+/* BOTONES GRANDES */
 .btn-full-container {
   margin: 20px auto;
   width: 80%;
@@ -65,7 +65,7 @@ body {
   cursor: pointer;
 }
 
-/* POPUP */
+/* POPUP DEL MENÚ */
 .popup {
   display: none;
   position: fixed;
@@ -97,15 +97,13 @@ body {
   cursor: pointer;
 }
 
-/* PANEL DESPLEGABLE */
+/* PANEL DESPLEGABLE (DATOS DE TRANSFERENCIA) */
 .toggle-box {
   width: 80%;
   margin: 0 auto;
   padding: 0 15px;
-  
   background: #e2e2e2;
   border-radius: 15px;
-
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.4s ease;
@@ -126,6 +124,7 @@ body {
   color: white;
   border-radius: 10px;
   cursor: pointer;
+  font-weight: 600;
 }
 
 /* FOOTER */
@@ -137,5 +136,3 @@ body {
   font-size: 14px;
   line-height: 1.4;
 }
-
-
