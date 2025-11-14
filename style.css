@@ -1,65 +1,68 @@
-/* General */
+/* GENERAL */
 body {
   margin: 0;
+  background: #e3e3e3;
   font-family: 'Poppins', sans-serif;
-  background: #ffffff;
   text-align: center;
 }
 
-/* Header */
-header {
-  background-color: #997a50;
-  padding: 30px 0;
+/* BANNER */
+.banner {
+  background: #a3a3a3;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-  width: 110px;
-  height: 110px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
-  object-fit: cover;
-  background: white;
-  padding: 5px;
 }
 
-/* Título */
-h1 {
-  font-size: 2.2rem;
-  font-weight: 800;
+/* TÍTULO */
+.titulo {
+  color: white;
+  margin-top: 10px;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+/* BOTONES */
+.btn-container {
   margin-top: 20px;
-}
-
-/* Botones */
-.botones {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin: 25px 0;
+  gap: 20px;
 }
 
 .btn {
-  background-color: #e2e2e2;
+  background: #a3a3a3;
   padding: 15px 35px;
-  border-radius: 12px;
-  border: none;
-  cursor: pointer;
-  font-size: 1.1rem;
+  color: white;
+  border-radius: 20px;
   text-decoration: none;
-  color: black;
-  transition: 0.25s ease;
+  font-size: 14px;
 }
 
-.btn:hover {
-  transform: scale(1.06);
-  background-color: #d5d5d5;
+.btn-full-container {
+  margin: 20px auto;
+  width: 80%;
 }
 
-/* Botón menú */
-.boton-menu {
-  margin-bottom: 25px;
+.btn-full {
+  width: 100%;
+  padding: 15px;
+  background: #a3a3a3;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  cursor: pointer;
 }
 
-/* Popup menú */
+/* POPUP DEL MENÚ */
 .popup {
   display: none;
   position: fixed;
@@ -67,85 +70,65 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.75);
+  backdrop-filter: blur(6px);
   justify-content: center;
   align-items: center;
-  z-index: 1000;
+  flex-direction: column;
 }
 
-.popup-img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 12px;
+.menu-img {
+  width: 85%;
+  max-width: 380px;
+  border-radius: 10px;
 }
 
-#closePopup {
-  position: absolute;
-  top: 25px;
-  right: 35px;
-  font-size: 45px;
-  color: white;
+.cerrar {
+  margin-top: 15px;
+  padding: 10px 20px;
+  background: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
   cursor: pointer;
 }
 
-/* PANEL TRANSFERENCIA */
-.panel-transferencia {
-  margin-top: 40px;
-  animation: fadeIn 0.7s ease;
-}
-
-.panel-transferencia h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
-  margin-bottom: 15px;
-}
-
-.transfer-box {
-  background-color: #e2e2e2;
-  width: 85%;
-  margin: auto;
-  padding: 20px;
+/* PANEL DESPLEGABLE */
+.toggle-box {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 15px;
+  
+  background: #dcdcdc;
   border-radius: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
-  animation: slideUp 0.7s ease;
+
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.4s ease;
 }
 
-.transfer-box p {
-  margin: 10px 0;
-  font-size: 1rem;
+.toggle-box p {
+  text-align: left;
+  margin: 12px 0;
 }
 
-.copiado {
-  display: none;
-  margin-top: 12px;
-  font-size: 1rem;
-  color: green;
-  font-weight: bold;
-}
-
-/* Footer */
-footer {
-  background-color: #997a50;
+/* BOTÓN COPIAR */
+.copy-btn {
+  margin: 10px 0 15px;
+  padding: 10px 20px;
+  border: none;
+  background: #8f8f8f;
   color: white;
-  padding: 15px 10px;
-  margin-top: 50px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 
-/* Animaciones */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+/* FOOTER */
+.footer {
+  margin-top: 40px;
+  padding: 20px;
+  background: #b5b5b5;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 1.4;
 }
-
-@keyframes slideUp {
-  from { transform: translateY(40px); opacity: 0; }
-  to { transform: translateY(0); opacity: 1; }
-}
-
-/* Responsive */
-@media (max-width: 600px) {
-  .btn {
-    width: 80%;
-  }
-}
-
