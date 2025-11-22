@@ -1,53 +1,76 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FinaCafé</title>
-<link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fincafé Navojoa</title>
 
+  <!-- Icono -->
+  <link rel="icon" type="image/png" href="logo.png">
+
+  <link rel="stylesheet" href="style.css">
+</head>
 <body>
 
-    <!-- BANNER -->
-    <header class="banner">
-        <img src="logo.png" alt="Logo FinaCafe">
-    </header>
+  <!-- BANNER SUPERIOR -->
+  <header class="banner">
+    <img src="logo.png" class="logo" alt="Logo Fincafé">
+  </header>
 
-    <h1 class="title">Síguenos</h1>
+  <!-- TÍTULO -->
+  <h1 class="titulo">Síguenos</h1>
 
-    <!-- BOTONES -->
-    <div class="btn-container">
+  <!-- BOTONES SUPERIORES -->
+  <div class="btn-container">
+    <a href="https://www.instagram.com/fincafenavojoa/" class="btn">Instagram</a>
+    <a href="https://www.facebook.com/profile.php?id=61566631057362&sk=about" class="btn">Facebook</a>
+  </div>
 
-        <a href="#" class="gray-btn">Instagram</a>
-        <a href="#" class="gray-btn">Facebook</a>
+  <!-- BOTÓN MENÚ -->
+  <div class="btn-full-container">
+    <button class="btn-full" onclick="mostrarMenu()">Nuestro Menú</button>
+  </div>
 
-        <a href="#" class="gray-btn full">Nuestro Menú</a>
+  <!-- POPUP MENU -->
+  <div id="menuPopup" class="popup">
+    <div class="popup-content">
+      <img src="menufincafe.png" class="menu-img" alt="Menú Fincafé">
+      <button class="cerrar" onclick="cerrarMenu()">Cerrar</button>
+    </div>
+  </div>
 
-        <button id="btnTransferencia" class="gray-btn full">Datos de transferencia</button>
+  <!-- BOTÓN TRANSFERENCIA -->
+  <div class="btn-full-container">
+    <button class="btn-full" id="btnTransferencia" onclick="toggleTransferencia()">Datos de transferencia</button>
+  </div>
 
+  <!-- PANEL DESPLEGABLE DATOS DE TRANSFERENCIA -->
+  <section id="transferencia" class="datos-box" style="display:none;">
+
+    <h2>Datos de Transferencia</h2>
+
+    <div class="dato">
+      <span><strong>Banco:</strong> Cuenta Cashi</span>
     </div>
 
-    <!-- DATOS DE TRANSFERENCIA (OCULTOS AL INICIO) -->
-    <div id="transferencia" class="datos-box" style="display:none;">
-        <p><strong>Banco:</strong> BBVA</p>
-        <p><strong>Nombre:</strong> FinaCafé</p>
-        <p><strong>Tarjeta:</strong> 4152 3456 7890 1234</p>
-        <p><strong>Cuenta:</strong> 0123456789</p>
-        <p><strong>Clabe:</strong> 012345678912345678</p>
+    <div class="dato">
+      <span><strong>Beneficiario:</strong> Luis Fernando Navarro Felix</span>
     </div>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <p>Made by: Fluxora Studio<br>FinaCafé Navojoa 2025</p>
-    </footer>
+    <div class="dato">
+      <span><strong>Cuenta CLABE:</strong> 71518 02830 0069 0387</span>
+      <button class="copy" data-copy="715180283000690387">Copiar</button>
+    </div>
 
-<script>
-document.getElementById("btnTransferencia").addEventListener("click", () => {
-    const box = document.getElementById("transferencia");
-    box.style.display = (box.style.display === "none") ? "block" : "none";
-});
-</script>
+  </section>
 
+  <!-- FOOTER -->
+  <footer class="footer">
+    MADE BY: <a href="https://www.facebook.com/profile.php?id=61575502357820">FLUXORA CREATIVE STUDIO</a><br>
+    FINCAFÉ NAVOJOA <br>
+    Navojoa, Sonora México
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
