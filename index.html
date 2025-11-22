@@ -1,76 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fincafé Navojoa</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fincafe Navojoa</title>
 
-  <!-- Icono -->
-  <link rel="icon" type="image/png" href="logo.png">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            text-align: center;
+        }
 
-  <link rel="stylesheet" href="style.css">
+        /* CONTENEDOR PRINCIPAL */
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* LOGO */
+        .logo img {
+            width: 180px;
+            margin-top: 20px;
+        }
+
+        h2 {
+            font-size: 32px;
+            font-weight: 800;
+            margin-top: 10px;
+            color: #2c2c2c;
+        }
+
+        /* BOTONES */
+        .btn {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            background: #b8b8b8;
+            color: black;
+            border-radius: 15px;
+            font-size: 16px;
+            margin: 10px 0;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: #a5a5a5;
+        }
+
+        /* DATOS DE TRANSFERENCIA */
+        #datosBox {
+            display: none;
+            background: white;
+            padding: 15px;
+            margin-top: 10px;
+            border-radius: 10px;
+            text-align: left;
+            font-size: 16px;
+        }
+
+        .data-item {
+            margin-bottom: 10px;
+        }
+
+        .copy-btn {
+            padding: 5px 8px;
+            font-size: 14px;
+            border: none;
+            background: #c2c2c2;
+            cursor: pointer;
+            border-radius: 8px;
+        }
+
+        /* FOOTER */
+        footer {
+            margin-top: 40px;
+            padding: 15px;
+            background: #997a50;
+            color: white;
+            font-size: 14px;
+        }
+
+        /* DESKTOP RESPONSIVE */
+        @media (min-width: 700px) {
+            .container {
+                max-width: 600px;
+            }
+            .logo img {
+                width: 220px;
+            }
+        }
+    </style>
+
+    <script>
+        function toggleDatos() {
+            var box = document.getElementById("datosBox");
+            box.style.display = box.style.display === "block" ? "none" : "block";
+        }
+
+        function copiar(texto) {
+            navigator.clipboard.writeText(texto);
+            alert("Copiado: " + texto);
+        }
+    </script>
 </head>
+
 <body>
 
-  <!-- BANNER SUPERIOR -->
-  <header class="banner">
-    <img src="logo.png" class="logo" alt="Logo Fincafé">
-  </header>
+    <div class="container">
 
-  <!-- TÍTULO -->
-  <h1 class="titulo">Síguenos</h1>
+        <!-- LOGO -->
+        <div class="logo">
+            <img src="/mnt/data/ae5973f3-ac29-473a-8ed0-7ce977228f4e.png" alt="Fincafe Logo">
+        </div>
 
-  <!-- BOTONES SUPERIORES -->
-  <div class="btn-container">
-    <a href="https://www.instagram.com/fincafenavojoa/" class="btn">Instagram</a>
-    <a href="https://www.facebook.com/profile.php?id=61566631057362&sk=about" class="btn">Facebook</a>
-  </div>
+        <h2>Síguenos</h2>
 
-  <!-- BOTÓN MENÚ -->
-  <div class="btn-full-container">
-    <button class="btn-full" onclick="mostrarMenu()">Nuestro Menú</button>
-  </div>
+        <!-- BOTONES -->
+        <a class="btn" href="https://instagram.com" target="_blank">Instagram</a>
+        <a class="btn" href="https://facebook.com" target="_blank">Facebook</a>
+        <a class="btn" href="#">Nuestro Menú</a>
 
-  <!-- POPUP MENU -->
-  <div id="menuPopup" class="popup">
-    <div class="popup-content">
-      <img src="menufincafe.png" class="menu-img" alt="Menú Fincafé">
-      <button class="cerrar" onclick="cerrarMenu()">Cerrar</button>
-    </div>
-  </div>
+        <!-- DATOS DE TRANSFERENCIA -->
+        <button class="btn" onclick="toggleDatos()">Datos de transferencia</button>
 
-  <!-- BOTÓN TRANSFERENCIA -->
-  <div class="btn-full-container">
-    <button class="btn-full" id="btnTransferencia" onclick="toggleTransferencia()">Datos de transferencia</button>
-  </div>
+        <div id="datosBox">
+            <div class="data-item"><strong>Banco:</strong> Cuenta Cashi</div>
+            <div class="data-item"><strong>Beneficiario:</strong> Luis Fernando Navarro Felix</div>
 
-  <!-- PANEL DESPLEGABLE DATOS DE TRANSFERENCIA -->
-  <section id="transferencia" class="datos-box" style="display:none;">
-
-    <h2>Datos de Transferencia</h2>
-
-    <div class="dato">
-      <span><strong>Banco:</strong> Cuenta Cashi</span>
+            <div class="data-item">
+                <strong>Cuenta CLABE:</strong> 71518 02830 0069 0387
+                <button class="copy-btn" onclick="copiar('71518 02830 0069 0387')">Copiar</button>
+            </div>
+        </div>
     </div>
 
-    <div class="dato">
-      <span><strong>Beneficiario:</strong> Luis Fernando Navarro Felix</span>
-    </div>
+    <footer>
+        Made by: Fluxora Studio<br>
+        Fincafe Navojoa 2025
+    </footer>
 
-    <div class="dato">
-      <span><strong>Cuenta CLABE:</strong> 71518 02830 0069 0387</span>
-      <button class="copy" data-copy="715180283000690387">Copiar</button>
-    </div>
-
-  </section>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    MADE BY: <a href="https://www.facebook.com/profile.php?id=61575502357820">FLUXORA CREATIVE STUDIO</a><br>
-    FINCAFÉ NAVOJOA <br>
-    Navojoa, Sonora México
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
