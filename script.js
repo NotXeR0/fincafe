@@ -1,32 +1,26 @@
-/* POPUP DEL MENÚ */
-function mostrarMenu() {
-  document.getElementById("menuPopup").style.display = "flex";
-}
+// Mostrar/ocultar menú en celular
+document.getElementById("menuBtn").addEventListener("click", () => {
+    const menu = document.getElementById("menu");
+    menu.style.display = menu.style.display === "flex" ? "none" : "flex";
+});
 
-function cerrarMenu() {
-  document.getElementById("menuPopup").style.display = "none";
-}
+// Mostrar datos de transferencia
+document.getElementById("btnTransferencia").addEventListener("click", () => {
+    document.getElementById("contenido").style.display = "none";
+    document.getElementById("transferencia").style.display = "block";
+});
 
-/* ACORDEÓN DE TRANSFERENCIA */
-function toggleTransferencia() {
-  const box = document.getElementById("transferenciaDatos");
+// Regresar al inicio
+document.getElementById("btnInicio").addEventListener("click", () => {
+    document.getElementById("transferencia").style.display = "none";
+    document.getElementById("contenido").style.display = "block";
+});
 
-  if (box.style.maxHeight && box.style.maxHeight !== "0px") {
-    box.style.maxHeight = "0px";
-  } else {
-    box.style.maxHeight = box.scrollHeight + "px";
-  }
-}
-
-/* COPIAR DATOS */
-function copiarDatos() {
-  const texto = `
-Cuenta CLABE: 71518 02830 0069 0387
-A nombre de: Luis Fernando Navarro Felix
-Banco: Cashi
-`;
-
-  navigator.clipboard.writeText(texto);
-
-  alert("Datos copiados ✔️");
-}
+// Función de copiar
+document.querySelectorAll(".copy").forEach(btn => {
+    btn.addEventListener("click", () => {
+        navigator.clipboard.writeText(btn.dataset.copy);
+        btn.innerText = "¡Copiado!";
+        setTimeout(() => btn.innerText = "Copiar", 1500);
+    });
+});
