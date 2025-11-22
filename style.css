@@ -1,4 +1,4 @@
-/* ======== RESET ======== */
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -6,84 +6,79 @@
   font-family: 'Poppins', sans-serif;
 }
 
-body {
-  background: #f6f7fb;
-  color: #222;
+body, html {
+  background: #fff;
   overflow-x: hidden;
 }
 
-/* ======== BANNER SUPERIOR ======== */
+/* BANNER SUPERIOR */
 .banner {
   width: 100%;
   background: #997a50;
-  padding: 40px 0;
+  padding: 35px 0;
   text-align: center;
 }
 
 .logo {
-  width: 90px;
+  width: 85px;
   height: auto;
   border-radius: 50%;
 }
 
-/* ======== TÍTULO ======== */
+/* TÍTULO */
 .titulo {
+  margin-top: 25px;
+  font-size: 2.2rem;
   text-align: center;
-  margin: 30px 0 10px;
-  font-size: 2rem;
-  color: #997a50;
+  font-weight: 700;
 }
 
-/* ======== BOTONES SUPERIORES ======== */
+/* CONTENEDOR DE BOTONES SUPERIORES */
 .btn-container {
-  width: 100%;
+  margin-top: 15px;
   display: flex;
   justify-content: center;
-  gap: 20px;
-  margin-bottom: 25px;
+  gap: 15px;
 }
 
+/* BOTÓN NORMAL */
 .btn {
-  background: #e2e2e2;
-  padding: 12px 25px;
+  background: #c3c3c3;
+  padding: 14px 25px;
   border-radius: 18px;
   text-decoration: none;
   color: black;
-  font-size: 1.1rem;
-  transition: 0.3s;
+  font-size: 0.95rem;
+  transition: 0.2s ease;
 }
 
 .btn:hover {
-  background: #d1d1d1;
-  transform: translateY(-3px);
+  background: #b6b6b6;
 }
 
-/* ======== BOTÓN FULL WIDTH ======== */
+/* BOTÓN FULL WIDTH */
 .btn-full-container {
-  width: 100%;
+  margin-top: 20px;
   display: flex;
   justify-content: center;
-  margin: 20px 0;
 }
 
 .btn-full {
   width: 90%;
-  max-width: 600px;
-  background: #997a50;
-  color: white;
+  max-width: 500px;
+  background: #c3c3c3;
   border: none;
-  padding: 16px;
-  font-size: 1.2rem;
+  padding: 14px;
   border-radius: 18px;
+  font-size: 0.95rem;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .btn-full:hover {
-  background: #876741;
+  background: #b6b6b6;
 }
 
-/* ======== POPUP MENÚ ======== */
+/* POPUP MENÚ */
 .popup {
   position: fixed;
   top: 0;
@@ -94,76 +89,53 @@ body {
   display: none;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   padding: 20px;
-  z-index: 999;
+  z-index: 1000;
 }
 
 .menu-img {
-  width: 90%;
-  max-width: 700px;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  width: 95%;
+  max-width: 450px;
+  border-radius: 10px;
 }
 
 .cerrar {
-  margin-top: 20px;
-  background: #e2e2e2;
+  margin-top: 15px;
+  padding: 10px 18px;
+  background: #c3c3c3;
+  border-radius: 12px;
   border: none;
-  padding: 12px 25px;
-  border-radius: 15px;
-  cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 0.9rem;
 }
 
-.cerrar:hover {
-  background: #d1d1d1;
-}
-
-/* ======== PANEL DESPLEGABLE ======== */
+/* PANEL DE TRANSFERENCIA */
 .toggle-box {
   width: 90%;
-  max-width: 600px;
-  background: white;
-  margin: 0 auto;
-  border-radius: 18px;
-  padding: 20px;
-  text-align: left;
+  max-width: 500px;
+  background: #f1f1f1;
+  margin: 10px auto 0;
+  padding: 15px;
+  border-radius: 15px;
+  font-size: 0.9rem;
   display: none;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-}
-
-.toggle-box p {
-  margin-bottom: 10px;
 }
 
 .copy-btn {
   width: 100%;
   background: #997a50;
-  border: none;
-  padding: 12px;
+  padding: 10px;
   border-radius: 12px;
+  border: none;
+  margin-top: 10px;
   color: white;
-  font-size: 1.1rem;
-  cursor: pointer;
 }
 
-.copy-btn:hover {
-  background: #876741;
-}
-
-/* ======== FOOTER ======== */
+/* FOOTER */
 .footer {
   margin-top: 40px;
   background: #997a50;
-  padding: 25px 15px;
   text-align: center;
+  padding: 25px;
   color: white;
-  font-size: 0.9rem;
-  line-height: 1.5;
-}
-
-.footer a {
-  color: #fff;
-  text-decoration: underline;
+  font-size: 0.85rem;
 }
